@@ -1,2 +1,2 @@
 # red5-parent
-Parent project to store the parent pom and shared parts and pieces
+Parent project for all red5 projects containing dependency management and general info
