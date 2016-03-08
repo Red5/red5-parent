@@ -24,7 +24,7 @@
     <name>Red5 :: Parent</name>
     <description>Parent project for all red5 projects containing dependency management and general info</description>
     <groupId>org.red5</groupId>
-    <version>1.0.7-M6</version>
+    <version>1.0.7-M7</version>
     <url>https://github.com/Red5/red5-parent</url>
     <inceptionYear>2005</inceptionYear>
     <organization>
@@ -109,21 +109,9 @@
             <name>Sonatype Releases</name>
             <url>http://oss.sonatype.org/content/repositories/releases</url>
         </repository>
-<!--
-        <repository>
-            <id>maven2-repository.dev.java.net</id>
-            <url>http://download.java.net/maven/2</url>
-        </repository>
-        <repository>
-            <id>maven2-repository.jfrog</id>
-            <url>http://repo.jfrog.org/artifactory/libs-releases/</url>
-        </repository>
--->
     </repositories>
     <dependencyManagement>
         <dependencies>
-            <!-- <dependency> <groupId>org.red5</groupId> <artifactId>red5-parent</artifactId> 
-                <version>${version}</version> <type>pom</type> </dependency> -->
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
