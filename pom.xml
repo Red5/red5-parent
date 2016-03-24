@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-<!--
+<!-- <![CDATA[
   Licensed to the Apache Software Foundation (ASF) under one
   or more contributor license agreements.  See the NOTICE file
   distributed with this work for additional information
@@ -16,15 +16,14 @@
   KIND, either express or implied.  See the License for the
   specific language governing permissions and limitations
   under the License.
-  
--->
+]]> -->
     <modelVersion>4.0.0</modelVersion>
     <artifactId>red5-parent</artifactId>
     <packaging>pom</packaging>
     <name>Red5 :: Parent</name>
     <description>Parent project for all red5 projects containing dependency management and general info</description>
     <groupId>org.red5</groupId>
-    <version>1.0.7-M9</version>
+    <version>1.0.7-M10</version>
     <url>https://github.com/Red5/red5-parent</url>
     <inceptionYear>2005</inceptionYear>
     <organization>
