@@ -71,7 +71,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.version>4.2.6.RELEASE</spring.version>
         <mina.version>2.0.13</mina.version>
-        <slf4j.version>1.7.18</slf4j.version>
+        <slf4j.version>1.7.21</slf4j.version>
         <logback.version>1.1.6</logback.version>
         <quartz.version>2.2.2</quartz.version>
         <bc.version>1.54</bc.version>
@@ -86,7 +86,7 @@
         <httpcore.version>4.4.4</httpcore.version>
         <xerces.version>2.11.0</xerces.version>
         <cglib.version>3.2.0</cglib.version>
-        <tomcat.version>8.0.33</tomcat.version>
+        <tomcat.version>8.0.35</tomcat.version>
     </properties>
     <repositories>
         <repository>
