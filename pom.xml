@@ -77,7 +77,7 @@
         <bc.version>1.54</bc.version>
         <junit.version>4.12</junit.version>
         <isoparser.version>1.1.17</isoparser.version>
-        <tika.version>1.11</tika.version>
+        <tika.version>1.13</tika.version>
         <ehcache.version>2.6.11</ehcache.version>
         <commons-beanutils.version>1.9.2</commons-beanutils.version>
         <commons-codec.version>1.10</commons-codec.version>
