@@ -23,7 +23,7 @@
     <name>Red5 :: Parent</name>
     <description>Parent project for all red5 projects containing dependency management and general info</description>
     <groupId>org.red5</groupId>
-    <version>1.0.8-M9</version>
+    <version>1.0.8-M10</version>
     <url>https://github.com/Red5/red5-parent</url>
     <inceptionYear>2005</inceptionYear>
     <organization>
@@ -237,12 +237,9 @@
                             <dependencySourceInclude>org.red5:*</dependencySourceInclude>
                         </dependencySourceIncludes>
                         <detectOfflineLinks>false</detectOfflineLinks>
-                        <stylesheetfile>javadoc.css</stylesheetfile>
                         <links>
                             <link>http://download.oracle.com/javase/7/docs/api</link>
-                            <link>http://docs.spring.io/spring/docs/4.0.3.RELEASE/javadoc-api</link>
-                            <link>http://www.slf4j.org/api</link>
-                            <link>http://logging.apache.org/log4j/1.2/apidocs</link>
+                            <link>http://docs.spring.io/spring/docs/${spring.version}/javadoc-api</link>
                         </links>
                         <tags>
                             <tag>
