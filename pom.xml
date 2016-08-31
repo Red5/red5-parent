@@ -88,7 +88,7 @@
         <httpcore.version>4.4.4</httpcore.version>
         <xerces.version>2.11.0</xerces.version>
         <cglib.version>3.2.0</cglib.version>
-        <tomcat.version>8.0.36</tomcat.version>
+        <tomcat.version>8.5.4</tomcat.version>
     </properties>
     <repositories>
         <repository>
