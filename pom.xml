@@ -70,8 +70,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>true</skipTests>
-        <spring.version>4.3.2.RELEASE</spring.version>
-        <mina.version>2.0.14</mina.version>
+        <spring.version>4.3.3.RELEASE</spring.version>
+        <mina.version>2.0.15</mina.version>
         <slf4j.version>1.7.21</slf4j.version>
         <logback.version>1.1.7</logback.version>
         <quartz.version>2.2.2</quartz.version>
@@ -80,7 +80,7 @@
         <isoparser.version>1.1.17</isoparser.version>
         <tika.version>1.13</tika.version>
         <ehcache.version>2.6.11</ehcache.version>
-        <commons-beanutils.version>1.9.2</commons-beanutils.version>
+        <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <commons-codec.version>1.10</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-lang3.version>3.4</commons-lang3.version>
