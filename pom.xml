@@ -79,7 +79,7 @@
         <junit.version>4.12</junit.version>
         <isoparser.version>1.1.21</isoparser.version>
         <tika.version>1.14</tika.version>
-        <ehcache.version>2.10.3</ehcache.version>
+        <ehcache.version>2.10.2</ehcache.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <commons-codec.version>1.10</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version>
