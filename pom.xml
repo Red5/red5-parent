@@ -70,25 +70,25 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>true</skipTests>
-        <spring.version>4.3.5.RELEASE</spring.version>
+        <spring.version>4.3.6.RELEASE</spring.version>
         <mina.version>2.0.16</mina.version>
         <slf4j.version>1.7.22</slf4j.version>
-        <logback.version>1.1.7</logback.version>
+        <logback.version>1.1.9</logback.version>
         <quartz.version>2.2.3</quartz.version>
-        <bc.version>1.55</bc.version>
+        <bc.version>1.56</bc.version>
         <junit.version>4.12</junit.version>
-        <isoparser.version>1.1.17</isoparser.version>
+        <isoparser.version>1.1.21</isoparser.version>
         <tika.version>1.14</tika.version>
-        <ehcache.version>2.6.11</ehcache.version>
+        <ehcache.version>2.10.3</ehcache.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <commons-codec.version>1.10</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-lang3.version>3.5</commons-lang3.version>
-        <httpclient.version>4.5.2</httpclient.version>
-        <httpcore.version>4.4.4</httpcore.version>
+        <httpclient.version>4.5.3</httpclient.version>
+        <httpcore.version>4.4.6</httpcore.version>
         <xerces.version>2.11.0</xerces.version>
-        <cglib.version>3.2.0</cglib.version>
-        <tomcat.version>8.5.9</tomcat.version>
+        <cglib.version>3.2.4</cglib.version>
+        <tomcat.version>8.5.11</tomcat.version>
     </properties>
     <repositories>
         <repository>
