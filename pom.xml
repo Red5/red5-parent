@@ -80,7 +80,7 @@
         <bc.version>1.56</bc.version>
         <junit.version>4.12</junit.version>
         <isoparser.version>1.9.27</isoparser.version>
-        <tika.version>1.15</tika.version>
+        <tika.version>1.16</tika.version>
         <ehcache.version>2.6.11</ehcache.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <commons-codec.version>1.10</commons-codec.version>
