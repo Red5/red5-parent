@@ -87,7 +87,7 @@
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-lang3.version>3.6</commons-lang3.version>
         <httpclient.version>4.5.3</httpclient.version>
-        <httpcore.version>4.4.6</httpcore.version>
+        <httpcore.version>4.4.7</httpcore.version>
         <xerces.version>2.11.0</xerces.version>
         <cglib.version>3.2.4</cglib.version>
         <tomcat.version>8.5.20</tomcat.version>
