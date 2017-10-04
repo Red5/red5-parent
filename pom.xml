@@ -79,7 +79,7 @@
         <quartz.version>2.3.0</quartz.version>
         <bc.version>1.58</bc.version>
         <junit.version>4.12</junit.version>
-        <isoparser.version>1.9.29</isoparser.version>
+        <isoparser.version>1.9.31</isoparser.version>
         <tika.version>1.16</tika.version>
         <ehcache.version>2.6.11</ehcache.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
