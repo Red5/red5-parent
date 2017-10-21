@@ -83,7 +83,7 @@
         <tika.version>1.16</tika.version>
         <ehcache.version>2.6.11</ehcache.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
-        <commons-codec.version>1.10</commons-codec.version>
+        <commons-codec.version>1.11</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-lang3.version>3.6</commons-lang3.version>
         <httpclient.version>4.5.3</httpclient.version>
