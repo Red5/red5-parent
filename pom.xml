@@ -72,25 +72,25 @@
         <skipTests>true</skipTests>
         <tomcatplugin.version>1.18</tomcatplugin.version>
         <websocket.version>1.12</websocket.version>
-        <spring.version>4.3.10.RELEASE</spring.version>
+        <spring.version>4.3.12.RELEASE</spring.version>
         <mina.version>2.0.16</mina.version>
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <quartz.version>2.3.0</quartz.version>
         <bc.version>1.58</bc.version>
         <junit.version>4.12</junit.version>
-        <isoparser.version>1.9.29</isoparser.version>
+        <isoparser.version>1.9.31</isoparser.version>
         <tika.version>1.16</tika.version>
         <ehcache.version>2.6.11</ehcache.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
-        <commons-codec.version>1.10</commons-codec.version>
+        <commons-codec.version>1.11</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-lang3.version>3.6</commons-lang3.version>
         <httpclient.version>4.5.3</httpclient.version>
-        <httpcore.version>4.4.6</httpcore.version>
+        <httpcore.version>4.4.7</httpcore.version>
         <xerces.version>2.11.0</xerces.version>
         <cglib.version>3.2.4</cglib.version>
-        <tomcat.version>8.5.16</tomcat.version>
+        <tomcat.version>8.5.23</tomcat.version>
     </properties>
     <repositories>
         <repository>
