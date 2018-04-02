@@ -71,7 +71,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>true</skipTests>
         <tomcatplugin.version>1.18</tomcatplugin.version>
-        <websocket.version>1.12</websocket.version>
+        <websocket.version>1.14</websocket.version>
         <spring.version>4.3.12.RELEASE</spring.version>
         <mina.version>2.0.17</mina.version>
         <slf4j.version>1.7.25</slf4j.version>
