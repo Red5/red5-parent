@@ -23,7 +23,7 @@
     <name>Red5 :: Parent</name>
     <description>Parent project for all red5 projects containing dependency management and general info</description>
     <groupId>org.red5</groupId>
-    <version>1.0.10-M6</version>
+    <version>1.0.10-M7</version>
     <url>https://github.com/Red5/red5-parent</url>
     <inceptionYear>2005</inceptionYear>
     <organization>
@@ -70,7 +70,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>true</skipTests>
-        <tomcatplugin.version>1.18</tomcatplugin.version>
+        <tomcatplugin.version>1.20</tomcatplugin.version>
         <websocket.version>1.14</websocket.version>
         <spring.version>4.3.12.RELEASE</spring.version>
         <mina.version>2.0.17</mina.version>
@@ -90,7 +90,7 @@
         <httpcore.version>4.4.7</httpcore.version>
         <xerces.version>2.11.0</xerces.version>
         <cglib.version>3.2.4</cglib.version>
-        <tomcat.version>8.5.23</tomcat.version>
+        <tomcat.version>8.5.30</tomcat.version>
     </properties>
     <repositories>
         <repository>
