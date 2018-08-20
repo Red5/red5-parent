@@ -85,7 +85,7 @@
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <commons-codec.version>1.11</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version>
-        <commons-lang3.version>3.7</commons-lang3.version>
+        <commons-lang3.version>3.8</commons-lang3.version>
         <httpclient.version>4.5.3</httpclient.version>
         <httpcore.version>4.4.7</httpcore.version>
         <xerces.version>2.11.0</xerces.version>
