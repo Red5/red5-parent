@@ -23,7 +23,7 @@
     <name>Red5 :: Parent</name>
     <description>Parent project for all red5 projects containing dependency management and general info</description>
     <groupId>org.red5</groupId>
-    <version>1.1.1</version>
+    <version>1.2.0</version>
     <url>https://github.com/Red5/red5-parent</url>
     <inceptionYear>2005</inceptionYear>
     <organization>
@@ -69,24 +69,27 @@
     </developers>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- highest src/target level is 1.10 rn with Coretto JDK 11 -->
+        <maven.compiler.source>1.10</maven.compiler.source>
+        <maven.compiler.target>1.10</maven.compiler.target>
         <skipTests>true</skipTests>
         <tomcatplugin.version>2.0.14</tomcatplugin.version>
         <tomcat.version>8.5.40</tomcat.version>
-        <spring.version>4.3.22.RELEASE</spring.version>
+        <spring.version>5.1.9.RELEASE</spring.version>
         <mina.version>2.0.21</mina.version>
-        <slf4j.version>1.7.25</slf4j.version>
+        <slf4j.version>1.7.28</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <bc.version>1.60</bc.version>
         <junit.version>4.12</junit.version>
-        <isoparser.version>1.9.31</isoparser.version>
-        <tika.version>1.16</tika.version>
-        <ehcache.version>2.6.11</ehcache.version>
-        <commons-beanutils.version>1.9.3</commons-beanutils.version>
-        <commons-codec.version>1.11</commons-codec.version>
-        <commons-collections.version>4.3</commons-collections.version>
+        <isoparser.version>1.9.39</isoparser.version>
+        <tika.version>1.22</tika.version>
+        <ehcache.version>3.8.0</ehcache.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <commons-codec.version>1.13</commons-codec.version>
+        <commons-collections.version>4.4</commons-collections.version>
         <commons-lang3.version>3.9</commons-lang3.version>
-        <httpcore.version>4.4.10</httpcore.version>
-        <httpclient.version>4.5.6</httpclient.version>
+        <httpcore.version>4.4.11</httpcore.version>
+        <httpclient.version>4.5.9</httpclient.version>
         <xerces.version>2.11.0</xerces.version>
         <cglib.version>3.2.4</cglib.version>
     </properties>
@@ -207,18 +210,14 @@
             <plugins>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.5.1</version>
+                    <version>3.8.1</version>
                     <configuration>
-                        <compilerVersion>1.8</compilerVersion>
-                        <fork>true</fork>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                        <executable>${maven.compiler.executable}</executable>
+                        <verbose>true</verbose>
                     </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>3.1.0</version>
                     <executions>
                         <execution>
                             <id>attach-sources</id>
@@ -230,7 +229,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.10.4</version>
+                    <version>3.1.1</version>
                     <executions>
                         <execution>
                             <id>attach-javadocs</id>
@@ -264,7 +263,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>3.1.2</version>
                     <executions>
                         <execution>
                             <configuration>
@@ -283,7 +282,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>2.10</version>
+                    <version>3.1.1</version>
                     <executions>
                         <execution>
                             <id>copy-dependencies</id>
