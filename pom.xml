@@ -73,7 +73,7 @@
         <maven.compiler.source>1.10</maven.compiler.source>
         <maven.compiler.target>1.10</maven.compiler.target>
         <skipTests>true</skipTests>
-        <tomcatplugin.version>2.0.14</tomcatplugin.version>
+        <tomcatplugin.version>2.0.15</tomcatplugin.version>
         <tomcat.version>8.5.40</tomcat.version>
         <spring.version>5.1.9.RELEASE</spring.version>
         <mina.version>2.0.21</mina.version>
@@ -90,8 +90,8 @@
         <commons-lang3.version>3.9</commons-lang3.version>
         <httpcore.version>4.4.11</httpcore.version>
         <httpclient.version>4.5.9</httpclient.version>
-        <xerces.version>2.11.0</xerces.version>
-        <cglib.version>3.2.4</cglib.version>
+        <cglib.version>3.2.7</cglib.version>
+        <w3cdom.version>2.3.0-jaxb-1.0.6</w3cdom.version>
     </properties>
     <repositories>
         <repository>
@@ -116,6 +116,11 @@
     </repositories>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+              <groupId>org.w3c</groupId>
+              <artifactId>dom</artifactId>
+              <version>${w3cdom.version}</version>
+            </dependency>            
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
@@ -208,11 +213,41 @@
     <build>
         <pluginManagement>
             <plugins>
+                <!-- mvn versions:display-plugin-updates -->
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>2.5</version>
+                    <configuration>
+                        <generateBackupPoms>false</generateBackupPoms>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>3.0.0-M2</version>
+                    <executions>
+                        <execution>
+                            <id>enforce-maven</id>
+                            <goals>
+                                <goal>enforce</goal>
+                            </goals>
+                            <configuration>
+                                <rules>
+                                    <requireMavenVersion>
+                                        <version>3.0.5</version>
+                                    </requireMavenVersion>
+                                </rules>    
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.1</version>
                     <configuration>
                         <verbose>true</verbose>
+                        <release>11</release>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -303,18 +338,18 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.19.1</version>
+                    <version>3.0.0-M3</version>
                     <configuration>
                       <skipTests>${skipTests}</skipTests>
                     </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>2.9</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-scm-plugin</artifactId>
-                    <version>1.9.4</version>
+                    <version>1.11.2</version>
                     <configuration>
                         <connectionType>connection</connectionType>
                     </configuration>
@@ -322,7 +357,7 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>4.2.0</version>
                     <extensions>true</extensions>
                 </plugin>
                 <plugin>
@@ -346,7 +381,7 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.7</version>
+                        <version>1.6.8</version>
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>ossrh</serverId>
@@ -387,6 +422,7 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>buildnumber-maven-plugin</artifactId>
+                        <version>1.4</version>
                         <executions>
                             <execution>
                                 <phase>validate</phase>
