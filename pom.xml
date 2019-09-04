@@ -23,7 +23,7 @@
     <name>Red5 :: Parent</name>
     <description>Parent project for all red5 projects containing dependency management and general info</description>
     <groupId>org.red5</groupId>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
     <url>https://github.com/Red5/red5-parent</url>
     <inceptionYear>2005</inceptionYear>
     <organization>
@@ -66,15 +66,19 @@
             <id>Tiago Jacobs</id>
             <email>tiago.jacobs@gmail.com</email>
         </developer>
+        <developer>
+            <id>Rajdeep Rath</id>
+            <email>rajdeeprath@gmail.com</email>
+        </developer>
     </developers>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- highest src/target level is 1.10 rn with Coretto JDK 11 -->
-        <maven.compiler.source>1.10</maven.compiler.source>
-        <maven.compiler.target>1.10</maven.compiler.target>
+        <maven.compiler.source>1.11</maven.compiler.source>
+        <maven.compiler.target>1.11</maven.compiler.target>
+        <java.release.level>11</java.release.level>
         <skipTests>true</skipTests>
-        <tomcatplugin.version>2.0.15</tomcatplugin.version>
-        <tomcat.version>8.5.43</tomcat.version>
+        <tomcatplugin.version>2.2.2</tomcatplugin.version>
+        <tomcat.version>8.5.45</tomcat.version>
         <spring.version>5.1.9.RELEASE</spring.version>
         <mina.version>2.0.21</mina.version>
         <slf4j.version>1.7.28</slf4j.version>
@@ -83,15 +87,16 @@
         <junit.version>4.12</junit.version>
         <isoparser.version>1.9.39</isoparser.version>
         <tika.version>1.22</tika.version>
-        <ehcache.version>3.8.0</ehcache.version>
+        <ehcache.version>2.10.6</ehcache.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <commons-codec.version>1.13</commons-codec.version>
         <commons-collections.version>4.4</commons-collections.version>
+        <commons-io.version>2.6</commons-io.version>
         <commons-lang3.version>3.9</commons-lang3.version>
         <httpcore.version>4.4.11</httpcore.version>
         <httpclient.version>4.5.9</httpclient.version>
         <cglib.version>3.2.7</cglib.version>
-        <w3cdom.version>2.3.0-jaxb-1.0.6</w3cdom.version>
+        <xerces.version>2.12.0</xerces.version>
     </properties>
     <repositories>
         <repository>
@@ -116,11 +121,6 @@
     </repositories>
     <dependencyManagement>
         <dependencies>
-            <dependency>
-              <groupId>org.w3c</groupId>
-              <artifactId>dom</artifactId>
-              <version>${w3cdom.version}</version>
-            </dependency>            
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
@@ -245,9 +245,54 @@
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.1</version>
+                    <executions>
+                        <execution>
+                            <id>default-compile</id>
+                            <configuration>
+                                <!-- compile everything to ensure module-info contains right entries -->
+                                <release>${java.release.level}</release>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>base-compile</id>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                            <!-- recompile everything for target VM except the module-info.java -->
+                            <configuration>
+                                <excludes>
+                                    <exclude>module-info.java</exclude>
+                                </excludes>
+                            </configuration>
+                        </execution>
+                    </executions>
+                    <!-- defaults for compile and testCompile -->
                     <configuration>
+                        <!-- Only required when JAVA_HOME isn't at least Java 9 and when haven't configured the maven-toolchains-plugin -->
+                        <jdkToolchain>
+                            <version>11</version>
+                        </jdkToolchain>
                         <verbose>true</verbose>
-                        <release>11</release>
+                        <release>${java.release.level}</release>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <!-- https://maven.apache.org/guides/mini/guide-using-toolchains.html -->
+                    <artifactId>maven-toolchains-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>toolchain</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <toolchains>
+                            <jdk>
+                                <version>[1.11,)</version>
+                            </jdk>
+                        </toolchains>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -283,7 +328,6 @@
                         </dependencySourceIncludes>
                         <detectOfflineLinks>false</detectOfflineLinks>
                         <links>
-                            <link>http://download.oracle.com/javase/8/docs/api</link>
                             <link>http://docs.spring.io/spring/docs/${spring.version}/javadoc-api</link>
                         </links>
                         <tags>
@@ -368,6 +412,30 @@
                         <useReleaseProfile>false</useReleaseProfile>
                         <releaseProfiles>release</releaseProfiles>
                         <goals>deploy</goals>
+                    </configuration>
+                </plugin>
+                <!-- Project http://code.revelc.net/formatter-maven-plugin/ -->
+                <plugin>
+                    <groupId>net.revelc.code.formatter</groupId>
+                    <artifactId>formatter-maven-plugin</artifactId>
+                    <version>2.8.1</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>format</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <configFile>red5-eclipse-format.xml</configFile>
+                        <!-- Enforce line-feed (linux,mac) line endings att -->
+                        <lineEnding>LF</lineEnding>
+                        <!-- Exclude xml and props files -->
+                        <excludes>
+                          <exclude>**/*.xml</exclude>
+                          <exclude>**/*.html</exclude>
+                          <exclude>**/*.properties</exclude>
+                        </excludes>
                     </configuration>
                 </plugin>
             </plugins>
