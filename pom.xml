@@ -79,7 +79,7 @@
         <skipTests>true</skipTests>
         <tomcatplugin.version>2.2.2</tomcatplugin.version>
         <tomcat.version>8.5.45</tomcat.version>
-        <spring.version>5.1.9.RELEASE</spring.version>
+        <spring.version>5.2.3.RELEASE</spring.version>
         <mina.version>2.0.21</mina.version>
         <slf4j.version>1.7.28</slf4j.version>
         <logback.version>1.2.3</logback.version>
