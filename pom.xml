@@ -23,7 +23,7 @@
     <name>Red5 :: Parent</name>
     <description>Parent project for all red5 projects containing dependency management and general info</description>
     <groupId>org.red5</groupId>
-    <version>1.2.3</version>
+    <version>1.2.4</version>
     <url>https://github.com/Red5/red5-parent</url>
     <inceptionYear>2005</inceptionYear>
     <organization>
@@ -77,11 +77,11 @@
         <maven.compiler.target>1.11</maven.compiler.target>
         <java.release.level>11</java.release.level>
         <skipTests>true</skipTests>
-        <tomcatplugin.version>2.2.2</tomcatplugin.version>
-        <tomcat.version>8.5.45</tomcat.version>
+        <tomcatplugin.version>2.2.4</tomcatplugin.version>
+        <tomcat.version>8.5.57</tomcat.version>
         <spring.version>5.1.9.RELEASE</spring.version>
         <mina.version>2.0.21</mina.version>
-        <slf4j.version>1.7.28</slf4j.version>
+        <slf4j.version>1.7.30</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <bc.version>1.60</bc.version>
         <junit.version>4.12</junit.version>
@@ -102,7 +102,7 @@
         <repository>
             <id>central</id>
             <name>Central Repository</name>
-            <url>http://repo.maven.apache.org/maven2</url>
+            <url>https://repo.maven.apache.org/maven2</url>
             <layout>default</layout>
             <snapshots>
                 <enabled>false</enabled>
@@ -111,12 +111,12 @@
         <repository>
             <id>sonatype-snapshots</id>
             <name>Sonatype Snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
         <repository>
             <id>sonatype-releases</id>
             <name>Sonatype Releases</name>
-            <url>http://oss.sonatype.org/content/repositories/releases</url>
+            <url>https://oss.sonatype.org/content/repositories/releases</url>
         </repository>
     </repositories>
     <dependencyManagement>
