@@ -82,7 +82,7 @@
         <spring.version>5.1.9.RELEASE</spring.version>
         <mina.version>2.0.21</mina.version>
         <slf4j.version>1.7.30</slf4j.version>
-        <logback.version>1.2.3</logback.version>
+        <logback.version>1.2.4</logback.version>
         <bc.version>1.60</bc.version>
         <junit.version>4.12</junit.version>
         <isoparser.version>1.9.39</isoparser.version>
