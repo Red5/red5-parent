@@ -23,7 +23,7 @@
     <name>Red5 :: Parent</name>
     <description>Parent project for all red5 projects containing dependency management and general info</description>
     <groupId>org.red5</groupId>
-    <version>1.2.6</version>
+    <version>1.2.7</version>
     <url>https://github.com/Red5/red5-parent</url>
     <inceptionYear>2005</inceptionYear>
     <organization>
@@ -96,7 +96,7 @@
         <httpcore.version>4.4.11</httpcore.version>
         <httpclient.version>4.5.9</httpclient.version>
         <cglib.version>3.2.7</cglib.version>
-        <xerces.version>2.12.0</xerces.version>
+        <xerces.version>2.12.1</xerces.version>
     </properties>
     <repositories>
         <repository>
