@@ -23,7 +23,7 @@
     <name>Red5 :: Parent</name>
     <description>Parent project for all red5 projects containing dependency management and general info</description>
     <groupId>org.red5</groupId>
-    <version>1.2.7</version>
+    <version>1.2.8</version>
     <url>https://github.com/Red5/red5-parent</url>
     <inceptionYear>2005</inceptionYear>
     <organization>
@@ -84,7 +84,7 @@
         <slf4j.version>1.7.30</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <bc.version>1.62</bc.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <isoparser.version>1.9.39</isoparser.version>
         <tika.version>1.22</tika.version>
         <ehcache.version>2.10.6</ehcache.version>
