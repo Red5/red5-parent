@@ -94,7 +94,7 @@
         <commons-io.version>2.6</commons-io.version>
         <commons-lang3.version>3.9</commons-lang3.version>
         <httpcore.version>4.4.11</httpcore.version>
-        <httpclient.version>4.5.9</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <cglib.version>3.2.7</cglib.version>
         <xerces.version>2.12.1</xerces.version>
     </properties>
