@@ -23,7 +23,7 @@
     <name>Red5 :: Parent</name>
     <description>Parent project for all red5 projects containing dependency management and general info</description>
     <groupId>org.red5</groupId>
-    <version>1.2.13</version>
+    <version>1.2.16</version>
     <url>https://github.com/Red5/red5-parent</url>
     <inceptionYear>2005</inceptionYear>
     <organization>
@@ -78,11 +78,11 @@
         <java.release.level>11</java.release.level>
         <skipTests>true</skipTests>
         <tomcatplugin.version>2.2.10</tomcatplugin.version>
-        <tomcat.version>[8.5.75,)</tomcat.version>
+        <tomcat.version>8.5.77</tomcat.version>
         <spring.version>[5.3.2,)</spring.version>
         <mina.version>2.0.23</mina.version>
-        <slf4j.version>[1.7.30,)</slf4j.version>
-        <logback.version>[1.2.3,)</logback.version>
+        <slf4j.version>1.7.36</slf4j.version>
+        <logback.version>1.2.11</logback.version>
         <bc.version>1.62</bc.version>
         <junit.version>[4.13.1,)</junit.version>
         <isoparser.version>1.9.39</isoparser.version>
